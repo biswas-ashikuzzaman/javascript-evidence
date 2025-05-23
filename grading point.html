@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading Point</title>
+</head>
+<body>
+    <script>
+        let mark=parseFloat(prompt("Enter the student obtain Mark:"));
+        let grade;
+        if(90<=mark && mark<=100){
+            grade=("Grade:A");
+        } else if(80<=mark && mark<=89){
+            grade=("Grade:B");
+        }else if(70<=mark && mark<=79){
+            grade=("Grade:C");
+        } else if(60<=mark && mark<=69){
+            grade=("Grade:D");
+        } else if(0<=mark && mark<=59){
+            grade=("Grade:F");
+        } else{
+            grade=("Invalid score! Please enter a number between 0 and 100.");
+        }
+        document.write(grade);
+    </script>
+</body>
+</html>

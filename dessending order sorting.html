@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = Number(prompt("Enter the first number (x):"));
+let y = Number(prompt("Enter the second number (y):"));
+let z = Number(prompt("Enter the third number (z):"));
+
+let a, b, c;
+
+if (x >= y && x >= z) {
+    a = x;
+    if (y >= z) {
+        b = y;
+        c = z;
+    } else {
+        b = z;
+        c = y;
+    }
+} else if (y >= x && y >= z) {
+    a = y;
+    if (x >= z) {
+        b = x;
+        c = z;
+    } else {
+        b = z;
+        c = x;
+    }
+} else {
+    a = z;
+    if (x >= y) {
+        b = x;
+        c = y;
+    } else {
+        b = y;
+        c = x;
+    }
+}
+
+alert(`Numbers in descending order: ${a}, ${b}, ${c}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Grade Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+        .grade-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        .grade-box:hover {
+            transform: scale(1.05);
+            background-color: #e6f7ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="grade-box" id="gradeResult"></div>
+
+    <script>
+        let percentage = prompt("Enter your percentage:");
+        percentage = parseFloat(percentage);
+
+        let grade = "";
+
+        if (percentage >= 90) {
+            grade = "A+";
+        } else if (percentage >= 60) {
+            grade = "A";
+        } else if (percentage >= 50) {
+            grade = "B";
+        } else {
+            grade = "Fail";
+        }
+
+        let resultDiv = document.getElementById("gradeResult");
+        resultDiv.innerHTML = `
+            <h2>Student Grade</h2>
+            <p>Percentage: <strong>${percentage}%</strong></p>
+            <p>Grade: <strong>${grade}</strong></p>
+        `;
+    </script>
+</body>
+</html>

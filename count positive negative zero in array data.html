@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Positive Negative Zero</title>
+</head>
+<body>
+    <script>
+        let data=[1,0,-6,7,-8,10,-12,-98,88,23,-65,0,0,77,45];
+        let p=0;
+        let n=0;
+        let z=0;
+      
+        for(let i=0; i<data.length; i++){
+            if(data[i]>0){
+                p ++;
+            } else if(data[i]<0){
+                n ++;
+            } else {
+                z++;
+            }
+        }
+        document.write("Total Positive Number:" + p + "<br>");
+        document.write("TotalNegative Number:" + n + "<br>");
+        document.write("Total Zero Number:" + z + "<br>");
+    </script>
+</body>
+</html>

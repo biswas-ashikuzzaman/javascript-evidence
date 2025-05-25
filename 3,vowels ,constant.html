@@ -6,35 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-
-    <!-- <script>
-        let input = "Hello World!";
-
-let vowels = "aeiouAEIOU";
-let vowelCount = 0;
-let consonantCount = 0;
-let occurrence = {};
-
-for (let char of input) {
-  if (/[a-zA-Z]/.test(char)) { // Check if character is a letter
-    occurrence[char.toLowerCase()] = (occurrence[char.toLowerCase()] || 0) + 1;
-
-    if (vowels.includes(char)) {
-      vowelCount++;
-    } else {
-      consonantCount++;
-    }
-  }
-}
-
-console.log("Vowel Count:", vowelCount);
-console.log("Consonant Count:", consonantCount);
-console.log("Occurrences:");
-for (let [char, count] of Object.entries(occurrence)) {
-  console.log(`${char}: ${count}`);
-}
-
-    </script> -->
 <script>
     let char = prompt("Enter a single letter:");
 
@@ -50,14 +21,23 @@ if (char.length !== 1 || !/[a-zA-Z]/.test(char)) {
     lowerChar === 'u'
   ) {
     alert(char + " is a vowel.");
+<<<<<<< HEAD
  document.write(char + " " +"is a vowel.");
 
   } else {
     alert(char + " is a consonant.");
  document.write(char + " " +"is a consonant.");
+=======
+        document.write(char + " "+ "is a vowel");
+
+  } else {
+    alert(char + " is a consonant.");
+    document.write(char + " "+ "is a consonant");
+>>>>>>> 1409db7aca369d734bfe476d9fe5e8679f58bd64
 
   }
 }
+
 
 </script>
 </body>

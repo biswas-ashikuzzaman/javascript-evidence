@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>small large sum </title>
+</head>
+<body>
+    <script>
+        let data = [45,34,98,12,75,-12,111,889,5];
+        let large = data[0];
+        let small  = data[0];
+        let sum = 0;
+        for (let num of data){
+            if (num > large){
+                large = num;
+            }else if (num < small ){
+                small  = num
+            }
+
+            sum += num;
+        }
+        document.write("The large number is : " + " "+ large)
+        document.write("<br>")
+        document.write("The small number is : " + " "+ small )
+        document.write("<br>")
+        document.write("The Total number is : " + " "+ sum)
+        document.write("<br>")
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Count Positive Negative Zero</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .result-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .result-box:hover {
+      transform: scale(1.03);
+      background-color: #e8f0ff;
+    }
+
+    .result-box h2 {
+      margin-bottom: 20px;
+    }
+
+    .result-box p {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-box" id="output"></div>
+
+  <script>
+    let data = [1, 0, -6, 7, -8, 10, -12, -98, 88, 23, -65, 0, 0, 77, 45];
+    let p = 0, n = 0, z = 0, sum = 0;
+
+    for (let i = 0; i < data.length; i++) {
+      if (data[i] > 0) p++;
+      else if (data[i] < 0) n++;
+      else z++;
+      sum += data[i];
+    }
+
+    let output = `
+      <h2>Array Analysis</h2>
+      <p><strong>Input Numbers:</strong> ${data.join(", ")}</p>
+      <p><strong>Total Positive Numbers:</strong> ${p}</p>
+      <p><strong>Total Negative Numbers:</strong> ${n}</p>
+      <p><strong>Total Zero Numbers:</strong> ${z}</p>
+      <p><strong>Sum of All Numbers:</strong> ${sum}</p>
+    `;
+
+    document.getElementById("output").innerHTML = output;
+  </script>
+</body>
+</html>

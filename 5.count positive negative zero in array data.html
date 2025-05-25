@@ -11,6 +11,7 @@
         let p=0;
         let n=0;
         let z=0;
+        let sum=0;
       
         for(let i=0; i<data.length; i++){
             if(data[i]>0){
@@ -20,10 +21,12 @@
             } else {
                 z++;
             }
+             sum += data[i];
         }
         document.write("Total Positive Number:" + p + "<br>");
         document.write("TotalNegative Number:" + n + "<br>");
         document.write("Total Zero Number:" + z + "<br>");
+         document.write("Sum of All Numbers: " + sum + "<br>");
     </script>
 </body>
 </html>
